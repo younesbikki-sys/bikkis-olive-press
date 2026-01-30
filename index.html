@@ -53,18 +53,48 @@
 }
 </script>
 </head>
-  <body> class="bg-[#0C110F] text-[#E8E8D8] font-sans">
-    <div class="max-w-4xl mx-auto py-20 px-6 text-center">
-        <h1 class="text-[#D4AF37] text-6xl font-serif mb-6">Bikki's Olive Press</h1>
-        <p class="text-2xl italic mb-8">Two Decades of Artisan Excellence</p>
-        <div class="bg-[#161F1A] p-8 rounded-lg shadow-xl border border-[#D4AF37]/30">
-            <p class="text-lg leading-relaxed">
-                Founded by Mohammed Bikki in 2006, our press in Tiznit, Morocco, 
-                continues a legacy of premium quality and traditional craftsmanship.
-            </p>
-        </div>
-        <button class="mt-10 bg-[#D4AF37] text-[#0C110F] px-8 py-3 rounded-full font-bold hover:bg-[#B8962E] transition-colors">
-            Explore Our Collection
-        </button>
-    </div>
+<body class="bg-[#0C110F] text-[#E8E8D8] font-sans">
+    <div id="root"></div>
+    <script type="module">
+        import React from 'react';
+        import ReactDOM from 'react-dom/client';
+        import { Droplets, MapPin, History, Award } from 'lucide-react';
+
+        const App = () => (
+            <div className="min-h-screen">
+                {/* Hero section exactly like Google AI Studio */}
+                <header className="max-w-6xl mx-auto py-24 px-6 text-center border-b border-[#D4AF37]/10">
+                    <h1 className="text-[#D4AF37] text-7xl font-serif mb-4 tracking-tight">Bikki's Olive Press</h1>
+                    <p className="text-2xl text-[#E8E8D8]/60 font-light tracking-widest uppercase">Pure Liquid Gold</p>
+                </header>
+
+                {/* Main Heritage content */}
+                <main className="max-w-4xl mx-auto py-20 px-6">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                            <div className="flex items-center gap-4 text-[#D4AF37]">
+                                <History size={20} />
+                                <span className="text-xs font-bold tracking-widest uppercase">Since 2006</span>
+                            </div>
+                            <h2 className="text-4xl font-serif text-[#D4AF37]">Artisan Excellence</h2>
+                            <p className="text-lg leading-relaxed text-[#E8E8D8]/80">
+                                Founded by <span className="text-[#D4AF37]">Mohammed Bikki</span>, our press in Tiznit continues a legacy of premium quality and traditional craftsmanship.
+                            </p>
+                        </div>
+                        <div className="bg-[#161F1A] p-10 rounded-3xl border border-[#D4AF37]/20 shadow-2xl">
+                            <div className="flex items-center gap-4 mb-4 text-[#D4AF37]">
+                                <MapPin size={24} />
+                                <span className="text-xl font-semibold text-[#E8E8D8]">Tiznit, Morocco</span>
+                            </div>
+                            <p className="text-sm italic opacity-50 italic">"Where tradition meets the desert sun."</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        );
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+    </script>
+</body>
 </html>
