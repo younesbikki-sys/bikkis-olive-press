@@ -1,59 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bikki's Olive Press</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              olive: {
-                bright: '#76E64B', // Bright Neon/Lime Green for location
-                light: '#84CC16', // Brighter Green (Lime-500) for buttons/highlights
-                DEFAULT: '#556B2F',
-                dark: '#E8E8D8', // Light text for Dark Mode
-              },
-              cream: '#0C110F', // Dark Background
-              gold: '#D4AF37', // Brand Gold
-              surface: '#161F1A', // Dark Surface
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', '"Amiri"', 'serif'],
-              sans: ['"Lato"', '"Cairo"', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
     <style>
-      body {
-        background-color: #0C110F;
-        color: #E8E8D8;
-        font-family: 'Lato', 'Cairo', sans-serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'Playfair Display', 'Amiri', serif;
-      }
+        body { background-color: #0C110F; color: #E8E8D8; font-family: sans-serif; }
+        .gold-text { color: #D4AF37; }
+        .btn-gold { background-color: #D4AF37; color: #0C110F; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body class="flex flex-col items-center justify-center min-h-screen p-6 text-center">
+    <h1 class="text-4xl font-bold gold-text mb-4">Bikki's Olive Press</h1>
+    <h2 class="text-xl mb-6 italic">Two Decades of Artisan Excellence</h2>
+    <p class="max-w-md mb-8">
+        Founded by Mohammed Bikki in 2006, our press brings the finest Moroccan tradition to your table.
+    </p>
+    <div class="space-y-4">
+        <button class="btn-gold">Explore Our Collection</button>
+        <p class="text-sm mt-4">Contact: Istanbul, Turkey</p>
+    </div>
+</body>
 </html>
